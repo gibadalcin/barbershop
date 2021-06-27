@@ -1,18 +1,21 @@
+/*paleta de cores uzadas no projeto*/
 :root {
     --grey: #BBBBBB;
-    --grey-t: #555555;
+    --t-grey: #555555;
+    --dark-grey: #888888;
     --black: #000000;
+    --opacity-black: RGBa(0,0,0,0.3);
     --gold: #c78c19;
     --green: #088C19;
     --white: #FFFFFF;
     --orange: #ffa500;
     --dark-orange: #ff8c00;
+    --almost-white: #FEFEFE;
 }
 
-* {
-    padding: 0px;
-    margin: 0px;
-}
+body {
+    font-family: 'Montserrat', sans-serif;
+ }
 
 header {
     background: var(--grey);
@@ -25,6 +28,7 @@ header {
     margin: 0 auto;
 }
 
+/*menu de navegação*/
 nav {
     position: absolute;
     top: 6.8rem;
@@ -39,7 +43,7 @@ nav li {
 nav a {
     text-transform: uppercase;
     text-decoration: none;
-    color: var(--black-text);
+    color: var(--black);
     font-weight: bold;
     font-size: 1.4rem;
 }
@@ -48,6 +52,112 @@ nav a:hover {
     color: var(--gold);
 }
 
+/*css da página principal*/
+.banner {
+    width: 100%;
+}
+
+.main-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin: 0 0 2rem;
+    clear: left;
+}
+
+
+.main-description {
+    padding: 0 1.8rem;
+    width: 76%;
+    margin: 0 auto;
+}
+
+.main-description {
+    padding: 2rem 0;
+    background: var(--almost-white) ;
+}
+
+.main-description p {
+    margin: 0 0 1rem;
+}
+
+.main-description strong {
+    font-weight: bold;
+}
+
+.main-description em {
+    font-style: italic;
+}
+
+.utensils {
+    width: 9rem;
+    float: left;
+    margin: 0 1.2rem 1.2rem 0;
+    box-shadow: 0.6rem 0.6rem 2rem var(--dark-grey);
+}
+
+.map {
+    padding: 3rem 0;
+    background: linear-gradient(var(--almost-white),var(--dark-grey));
+}
+
+.map p {
+    margin: 0 0 2rem;
+    text-align: center;
+}
+
+.content-map {
+    width: 76%;
+    margin: 0 auto;
+}
+
+.benefits {
+    padding: 2rem 0;
+    background: var(--dark-grey);
+}
+
+.benefits-content {
+    width: 40rem;
+    margin: 0 auto;
+}
+
+.benefits-list {
+    display: inline-block;
+    width: 40%;
+    vertical-align: top;
+}
+
+.itens {
+    line-height: 1.5rem;
+}
+
+.itens:before {
+    content: "\2605";
+}
+
+.itens:first-child {
+    font-weight: bold;
+}
+
+.benefits-image {
+    width: 59%;
+    opacity: 1;
+    transition: 400ms;
+    box-shadow: 0.6rem 0.6rem 2rem var(--black);
+}
+
+.benefits-image:hover {
+    opacity: 0.3;
+}
+
+.video {
+    width: 35rem;
+    margin: 1.6rem auto;
+}
+
+
+
+
+/*css página de produtos*/
 .products {
     width: 76%;
     margin: 0 auto;
@@ -93,6 +203,8 @@ nav a:hover {
     margin-top: 0.6rem;
 }
 
+
+/*css página de contato*/
 .contact-main {
     width: 76%;
     margin: 0 auto;
@@ -143,7 +255,7 @@ table {
 }
 
 thead {
-    background: var(--grey-t);
+    background: var(--t-grey);
     color: var(--white);
     font-weight: bold;
 }

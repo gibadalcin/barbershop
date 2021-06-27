@@ -6,11 +6,6 @@
     --black: #000000;
 }
 
-* {
-    padding: 0px;
-    margin: 0px;
-}
-
 html {
     font-size: 62,5%;
     overflow: scroll;
