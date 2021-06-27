@@ -1,0 +1,172 @@
+:root {
+    --grey: #BBBBBB;
+    --grey-t: #555555;
+    --black: #000000;
+    --gold: #c78c19;
+    --green: #088C19;
+    --white: #FFFFFF;
+    --orange: #ffa500;
+    --dark-orange: #ff8c00;
+}
+
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+header {
+    background: var(--grey);
+    padding: 1.2rem;
+}
+
+.d-header {
+    position: relative;
+    width: 76%;
+    margin: 0 auto;
+}
+
+nav {
+    position: absolute;
+    top: 6.8rem;
+    right: 0;
+}
+
+nav li {
+    display: inline;
+    margin-right: 1rem;
+}
+
+nav a {
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--black-text);
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+nav a:hover {
+    color: var(--gold);
+}
+
+.products {
+    width: 76%;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+
+.products li{
+    display: inline-block;
+    text-align: center;
+    width: 30%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 1.8rem 1.2rem;
+    box-sizing: border-box;
+    border: 0.2rem solid var(--black);
+    border-radius: 0.50rem;
+}
+
+.products li:hover {
+    border-color: var(--gold);
+}
+
+.products li:hover h2 {
+    font-size: 2rem;
+}
+
+.products li:active {
+    border-color: var(--green);
+}
+
+.products h2 {
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+.product-description {
+    font-size: 1.2rem;    
+}
+
+.product-price {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-top: 0.6rem;
+}
+
+.contact-main {
+    width: 76%;
+    margin: 0 auto;
+}
+
+form {
+    margin: 2.2rem 0;
+}
+
+form label,
+legend {
+    display: block;
+    font-size: 1.2rem;
+    margin: 0 0 0.6rem;
+}
+
+.input-default {
+    display: block;
+    margin: 0 0 1.2rem;
+    padding: 0.6rem 1.2rem;
+    width: 50%;
+}
+
+.checkbox {
+    margin: 1.2rem 0;
+}
+
+.submit {
+    width: 40%;
+    padding: 1rem 0;
+    background: var(--orange);
+    color: var(--white);
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 0.25rem;
+    transition: 1s;
+}
+
+.submit:hover {
+    background: var(--dark-orange);
+    cursor:pointer;
+    transform: scale(1.2) rotate(-2deg);
+}
+
+table {
+    margin: 1.2rem 0 2.4rem;
+}
+
+thead {
+    background: var(--grey-t);
+    color: var(--white);
+    font-weight: bold;
+}
+
+td, th {
+    border: 0.1rem solid var(--black);
+    padding: 0.4rem 1rem;
+}
+
+footer {
+    text-align: center;
+    background: url("../images/products/bg.jpg");
+    padding: 2.2rem 0;
+}
+
+.copyright {
+    color: var(--white);
+    font-size: 1rem;
+    margin-top: 1.2rem;
+}
+
+#copy {
+    font-size: 1.4rem;
+    vertical-align: middle;
+}
+
