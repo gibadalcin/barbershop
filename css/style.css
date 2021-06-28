@@ -13,8 +13,13 @@
     --almost-white: #FEFEFE;
 }
 
+
+
+/*cabeçálho do código - posicionamento logo superior*/
 body {
     font-family: 'Montserrat', sans-serif;
+    display: flex;
+    flex-direction: column;
  }
 
 header {
@@ -23,21 +28,28 @@ header {
 }
 
 .d-header {
-    position: relative;
-    width: 76%;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+   justify-content: space-around;
 }
+
+.d-header h1 {
+    display: flex;
+    
+}
+
+
 
 /*menu de navegação*/
 nav {
-    position: absolute;
-    top: 6.8rem;
-    right: 0;
+    padding: 7rem 0;
+    vertical-align: bottom;
 }
 
 nav li {
     display: inline;
-    margin-right: 1rem;
+    margin: 0 0 0 0.9rem;
 }
 
 nav a {
@@ -52,28 +64,45 @@ nav a:hover {
     color: var(--gold);
 }
 
+
+
+/*rodapé - posicionamento logo inferior*/
+footer {
+    text-align: center;
+    background: url("../images/products/bg.jpg");
+    padding: 2.2rem 0;
+}
+
+.copyright {
+    color: var(--white);
+    font-size: 1rem;
+    margin-top: 1.2rem;
+}
+
+#copy {
+    font-size: 1.4rem;
+    vertical-align: middle;
+}
+
+
+
+
 /*css da página principal*/
 .banner {
+    display: flex;
     width: 100%;
 }
 
 .main-title {
     text-align: center;
-    font-size: 1.8rem;
-    margin: 0 0 2rem;
-    clear: left;
+    font-size: 2rem;
+    margin: 0 0 1.2rem;
 }
 
-
-.main-description {
+section.main-description {
     padding: 0 1.8rem;
     width: 76%;
-    margin: 0 auto;
-}
-
-.main-description {
-    padding: 2rem 0;
-    background: var(--almost-white) ;
+    margin: 2rem auto 0 auto;
 }
 
 .main-description p {
@@ -95,9 +124,10 @@ nav a:hover {
     box-shadow: 0.6rem 0.6rem 2rem var(--dark-grey);
 }
 
-.map {
-    padding: 3rem 0;
+section.map {
+    padding: 2rem 0;
     background: linear-gradient(var(--almost-white),var(--dark-grey));
+    
 }
 
 .map p {
@@ -106,23 +136,27 @@ nav a:hover {
 }
 
 .content-map {
-    width: 76%;
-    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 10rem;
+    width:50%rem;
+    justify-content: center;
 }
 
-.benefits {
-    padding: 2rem 0;
+section.benefits {
+    padding: 1rem 0 2rem 0;
     background: var(--dark-grey);
 }
 
 .benefits-content {
-    width: 40rem;
-    margin: 0 auto;
+    display: flex;
+    width:60%;
+    margin: 2rem auto;
 }
 
 .benefits-list {
     display: inline-block;
-    width: 40%;
+    width: 49%;
     vertical-align: top;
 }
 
@@ -139,7 +173,7 @@ nav a:hover {
 }
 
 .benefits-image {
-    width: 59%;
+    width: 50%;
     opacity: 1;
     transition: 400ms;
     box-shadow: 0.6rem 0.6rem 2rem var(--black);
@@ -150,30 +184,37 @@ nav a:hover {
 }
 
 .video {
-    width: 35rem;
-    margin: 1.6rem auto;
+    width: 40%;
+    margin: 2rem auto 0 auto;
 }
 
 
 
 
 /*css página de produtos*/
+.description { 
+    width: 90%;
+    margin: 3rem auto 0 auto;
+}
+
 .products {
-    width: 76%;
-    margin: 0 auto;
-    padding: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
 .products li{
-    display: inline-block;
+    display: flex;
+    width: 25%;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    width: 30%;
     vertical-align: top;
-    margin: 0 1.5%;
-    padding: 1.8rem 1.2rem;
-    box-sizing: border-box;
+    padding: 2rem 2rem;
     border: 0.2rem solid var(--black);
     border-radius: 0.50rem;
+    box-sizing: border-box;
+    margin: 0 1rem 3rem 0;
 }
 
 .products li:hover {
@@ -189,19 +230,23 @@ nav a:hover {
 }
 
 .products h2 {
+    display: flex;
     font-size: 1.8rem;
     font-weight: bold;
 }
 
 .product-description {
+    display: flex;
     font-size: 1.2rem;    
 }
 
 .product-price {
+    display: flex;
     font-size: 1.8rem;
     font-weight: bold;
     margin-top: 0.6rem;
 }
+
 
 
 /*css página de contato*/
@@ -265,20 +310,138 @@ td, th {
     padding: 0.4rem 1rem;
 }
 
-footer {
-    text-align: center;
-    background: url("../images/products/bg.jpg");
-    padding: 2.2rem 0;
+
+
+
+@media (max-width: 1024px) {
+
+    .description { 
+        width: 96%;
+        margin: 2rem auto 0 auto;
+    }
+
+    .products li{
+        width: 40%;
+    }
 }
 
-.copyright {
-    color: var(--white);
-    font-size: 1rem;
-    margin-top: 1.2rem;
-}
 
-#copy {
-    font-size: 1.4rem;
-    vertical-align: middle;
-}
 
+@media (max-width: 480px) {
+
+    /*cabeçalho*/
+    .d-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav {
+        padding: 0;
+    }
+
+    nav a {
+        font-size: 1rem;   
+    }
+
+    nav li {
+        margin: 0 0.5rem 0 0;
+    }
+
+
+    /*rodapé*/
+    .copyright {
+        color: var(--white);
+        font-size: 0.8rem;
+        margin-top: 1.2rem;
+    }
+
+    #copy {
+        font-size: 1rem;
+    }    
+
+
+    /*página principal*/
+    .main-title {
+        display: block;
+        font-size: 1.4rem;
+        margin-top: 1rem;
+    }
+
+    .utensils {
+        width: 40%;
+        padding: 0 0.1rem 1px 0;
+    }
+
+    section.main-description {
+        padding: 0;
+    }
+
+    section.map {
+        padding: 0.5rem 0 0.5rem 0;
+    }
+
+    .content-map {
+        padding: 0 0.5rem;     
+    }
+
+    .benefits {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .benefits-content {
+        display: flex;
+        flex-direction: column;
+        width: 96%;
+        margin: 0 1rem 1rem 1rem;
+    }
+
+    .benefits-list {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .benefits-image {
+        width: 94%;
+    }
+
+    .video {
+        width: 94%;
+        margin-top: 1rem;
+    }
+
+
+    /*página produtos*/
+    .description {
+        display: block;
+        width: 90%;
+        margin: 0 auto;
+    }
+    
+    .products {
+        display: block;
+    }
+
+    .products li {
+        width: 100%;
+        box-sizing: border-box;
+        text-align: center;
+        margin: 2rem 0;
+    }
+
+
+    /*página contato*/
+    .contact-main {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .input-default {
+        width: 86%;
+    }
+
+    .submit {
+        width: 60%;
+    }
+
+}
